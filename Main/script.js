@@ -109,6 +109,7 @@ function renderForecast(locationWeather) {
     );
     // fetch humidity
     var cityHumidity = locationWeather.list[(i + 1) * 8 - 1].main.humidity;  
+    
   }
 }
 
