@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./styles/jass.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Weather Dashboard</title>
   </head>
 
-  <body>
+  <body onload="defaultValue()">
     <div>
         <h1 id="Para1">Weather Forecast</h1>
         <p id="inputContainer">City: <input type="text" id="cityInput"></p>
-        <button type="button" onclick="fetchForecast()" onclick="fetchWeather()">Search</button>     
+        <button type="button" onclick="searchHandler()">Search</button>     
         <h2 id="cityName"></h2>
     </div>
     
@@ -20,32 +22,37 @@
         <div id="iconsContainer">    
             <div class = "cards">
                 <p class="weather" id="day1"></p>
-                <div class="icons" id="day1icon"></div>
-                <p class="temp" id="day1temp"></p>
+                <div class="img"><img src="dots.png" class="weatherImg" id="img1"></div>
+                <p class="maxTemp" id="day1maxTemp"></p>
+                <p class="minTemp" id="day1minTemp"></p>
                 <p class="humidity" id="day1humidity"></p>
             </div>
             <div class = "cards">
               <p class="weather" id="day2"></p>
-              <div class="icons" id="day2icon"></div>
-              <p class="temp" id="day2temp"></p>
+              <div class="img"><img src="dots.png" class="weatherImg" id="img2"></div>
+              <p class="maxTemp" id="day2maxTemp"></p>
+              <p class="minTemp" id="day2minTemp"></p>
               <p class="humidity" id="day2humidity"></p>
             </div>
             <div class = "cards">
               <p class="weather" id="day3"></p>
-              <div class="icons" id="day3icon"></div>
-              <p class="temp" id="day3temp"></p>
+              <div class="img"><img src="dots.png" class="weatherImg" id="img3"></div>
+              <p class="maxTemp" id="day3maxTemp"></p>
+              <p class="minTemp" id="day3minTemp"></p>
               <p class="humidity" id="day3humidity"></p>
             </div>
             <div class = "cards">
               <p class="weather" id="day4"></p>
-              <div class="icons" id="day4icon"></div>
-              <p class="temp" id="day4temp"></p>
+              <div class="img"><img src="dots.png" class="weatherImg" id="img4"></div>
+              <p class="maxTemp" id="day4maxTemp"></p>
+              <p class="minTemp" id="day4minTemp"></p>
               <p class="humidity" id="day4humidity"></p>
             </div>
             <div class = "cards">
               <p class="weather" id="day5"></p>
-              <div class="icons" id="day5icon"></div>
-              <p class="temp" id="day5temp"></p>
+              <div class="img"><img src="dots.png" class="weatherImg" id="img5"></div>
+              <p class="maxTemp" id="day5maxTemp"></p>
+              <p class="minTemp" id="day5minTemp"></p>
               <p class="humidity" id="day5humidity"></p>
           </div>
         </div>
@@ -67,6 +74,6 @@
       integrity="sha512-pslqxxHAYPCxaSeFSmXXxDkLejD5dbFVC66aiVq0z4v7VTJBU+wqcG1OpNh4p3MjS2D6NCwz/H2QmSc7dXxryg==" 
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
   </body>
+  <script src="script.js" defer></script>
 </html>
